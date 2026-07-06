@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Crypto</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0px auto;
+
+            position: sticky;
+            top: 0;
+
+            background-color: black;
+            padding: 20px;
+            
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: gold;
+            text-shadow: 0 0 10px purple;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: gold;
+            text-shadow: 0 0 10px gold;
+        }
+
+        .hero {
+            width: 90%;
+            max-width: 1100px;
+            margin: 60px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-image img {
+            width: 320px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px purple;
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            color: gold;
+            text-shadow: 0 0 15px purple;
+        }
+
+        .hero p {
+            font-size: 22px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: purple;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: gold;
+            color: black;
+        }
+
+        .services {
+            width: 90%;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 40px;
+            color: gold;
+            margin-bottom: 40px;
+        }
+
+        .service-box {
+            display: flex;
+            gap: 30px;
+        }
+
+        .service {
+            flex: 1;
+            border: 2px solid purple;
+            border-radius: 15px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            border-color: gold;
+            box-shadow: 0 0 15px purple;
+        }
+
+        .about,
+        .testimonials,
+        .cta {
+            width: 90%;
+            max-width: 1000px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .about h2,
+        .testimonials h2,
+        .cta h2 {
+            font-size: 40px;
+            color: gold;
+            margin-bottom: 20px;
+        }
+
+        .about p,
+        .cta p {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        .testimonial-box {
+            border: 2px solid purple;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 25px;
+        }
+
+        .testimonial-box h4 {
+            margin-top: 15px;
+            color: gold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: gray;
+            border-top: 1px solid purple;
+            margin-top: 80px;
+            
+        }
+        @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                margin: 60px auto;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .hero-image img {
+                width: 250px;
+            }
+
+            .service-box {
+                flex-direction: column;
+            }
+
+            .nav-links a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            ⚡ VORTEX CRYPTO
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-image">
+            <img src="vortex.jfif" alt="Crypto Hero">
+        </div>
+
+        <div class="hero-content">
+
+            <h1>Vortex Crypto</h1>
+
+             <h2 id="message">Welcome Trader</h2>
+
+            <button onclick="changeMessage()">
+               Click Me
+            </button> 
+
+            <p>
+                Learn professional crypto trading strategies and market analysis.
+                Join our growing Telegram community and take your trading to the
+                next level.
+            </p>
+
+            <a href="https://t.me/cryptomasonverl" class="btn" onclick="welcomemessage()">
+                JOIN TELEGRAM
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="services" id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="service-box">
+
+            <div class="service">
+                <h3>Trading Signals</h3>
+                <p>Get high-quality crypto trading signals and market insights.</p>
+            </div>
+
+            <div class="service">
+                <h3>Market Analysis</h3>
+                <p>Daily analysis of BTC, ETH, XRP and other major cryptocurrencies.</p>
+            </div>
+
+            <div class="service">
+                <h3>Mentorship</h3>
+                <p>Learn professional trading strategies from experienced traders.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            Vortex Crypto is a professional crypto trading community dedicated
+            to helping traders improve their skills through education, market
+            analysis, trading signals, and mentorship. Our mission is to help
+            members make informed trading decisions and achieve long-term success.
+        </p>
+
+    </section>
+
+    <section class="testimonials">
+
+        <h2>What Our Members Say</h2>
+
+        <div class="testimonial-box">
+            <p>
+                "The market analysis and signals have helped me become more
+                confident in my trading decisions."
+            </p>
+            <h4>- Community Member</h4>
+        </div>
+
+        <div class="testimonial-box">
+            <p>
+                "Excellent mentorship and easy-to-understand lessons. Highly recommended."
+            </p>
+            <h4>- Crypto Trader</h4>
+        </div>
+
+    </section>
+
+    <section class="cta" id="contact">
+
+        <h2>Ready to Start Trading?</h2>
+
+        <p>
+            Join our Telegram community today and gain access to valuable
+            trading insights, analysis, and mentorship.
+        </p>
+
+        <a href="https://t.me/cryptomasonverl" class="btn">
+            JOIN TELEGRAM NOW
+        </a>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Vortex Crypto. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+
+        let tradername = "Mason";
+        let favoritecoin = "Bitcoin";
+
+function welcomemessage() {
+    alert(
+        "Welcome " + tradername + 
+    "! your favorite coin is " +
+     favoritecoin
+    );
+}
+
+    </script>  
+
+<script>
+
+function changeMessage() {
+    document.getElementById("message").innerHTML =
+        "Welcome to Vortex Crypto!";
+}
+
+function updatePrice() {
+    document.getElementById("btcprice").innerHTML =
+        "BTC Price: $120,000";
+}
+
+</script>
+</body>
+
+</html>
